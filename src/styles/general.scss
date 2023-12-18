@@ -1,0 +1,18 @@
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+@use '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to left,
+    transparent 0px,
+    transparent 20px,
+    rgba(#000, 0.02) 20px,
+    rgba(#000, 0.02) 40px),
+linear-gradient(to bottom,
+    transparent 0px,
+    transparent 20px,
+    rgba(#000, 0.02) 20px,
+    rgba(#000, 0.02) 40px);
+background-size: 40px, 100% 40px;
+}
