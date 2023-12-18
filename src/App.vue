@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import { store } from './js/store.js';
 import axios from 'axios';
 import AppHeader from './components/AppHeader.vue';
 import CharactersList from './components/CharactersList.vue';
@@ -22,6 +23,7 @@ export default {
   data() {
     return {
       characters: [],
+      store
     }
   },
   methods: {
@@ -30,7 +32,7 @@ export default {
       .then((response) => {
         // handle success
         console.log(response);
-        this.characters = response.data.results;
+        this.store.charactersList = response.data.results;
       })
       .catch(function (error) {
         // handle error

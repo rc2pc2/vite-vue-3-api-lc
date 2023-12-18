@@ -2,7 +2,7 @@
     <section id='characters' class="container">
         <!-- <article></article> -->
         <div class="row">
-            <article v-for="character in charactersList" :key="character.id" class="col-6 col-md-3 col-lg-2 mb-5">
+            <article v-for="character in store.charactersList" :key="character.id" class="col-6 col-md-3 col-lg-2 mb-5">
                 <SingleCharacter :character="character" />
             </article>
         </div>
@@ -23,15 +23,6 @@ export default {
     components:{
         SingleCharacter
     },
-
-    props: {
-        charactersList: {
-            type: Array,
-            required: true,
-        }
-    }
-
-
 }
 </script>
 
